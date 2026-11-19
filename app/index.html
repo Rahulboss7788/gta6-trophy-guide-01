@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Atlas — GTA VI PS5 Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-text">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+    <h1>Leonida Trophy Atlas</h1>
+    <p class="tagline">Every trophy, its official description, a cited guide in plain words, and a tracker that remembers where you are. Works fully offline — no network, no account, no cloud.</p>
+  </div>
+  <div class="progress-box" aria-label="Progress">
+    <svg class="ring" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Trophies earned">
+      <circle class="ring-track" cx="60" cy="60" r="52"></circle>
+      <circle class="ring-fill" id="ringFill" cx="60" cy="60" r="52"></circle>
+      <text class="ring-number" id="ringNumber" x="60" y="58" text-anchor="middle">0/55</text>
+      <text class="ring-label" x="60" y="78" text-anchor="middle">earned</text>
+    </svg>
+    <p class="grade-counts" id="gradeCounts"></p>
+  </div>
+</header>
+
+<section class="warning" id="missableBanner">
+  <strong>Read this first:</strong> there is <strong>no mission replay</strong> and no New Game Plus, so keep a <strong>manual save at the start of every chapter</strong> and one before the final mission. One trophy is flagged potentially missable — <strong>Positive Mental Attitude</strong> — because a meditation spot in Chapter 1 disappears after that chapter. Do it before Chapter 1 ends. Never use cheats on your trophy save: guides report cheats switch trophies off.
+</section>
+
+<nav class="toolbar" aria-label="Tracker controls">
+  <input id="searchBox" type="search" placeholder="Search a trophy, mission or keyword…" aria-label="Search trophies">
+  <div class="filter-group" id="kindFilters" role="group" aria-label="Filter by kind">
+    <button type="button" data-kind="all" class="filter-btn active">All 55</button>
+    <button type="button" data-kind="story" class="filter-btn">Story</button>
+    <button type="button" data-kind="missable" class="filter-btn">Missable</button>
+    <button type="button" data-kind="collectible" class="filter-btn">Collectibles</button>
+    <button type="button" data-kind="activity" class="filter-btn">Activities</button>
+    <button type="button" data-kind="online" class="filter-btn">Online</button>
+  </div>
+  <label class="grade-label">Grade
+    <select id="gradeSelect">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="toggle-label"><input id="spoilerToggle" type="checkbox" checked> Hide story spoilers</label>
+  <label class="toggle-label"><input id="earnedOnly" type="checkbox"> Earned only</label>
+  <div class="file-actions">
+    <button id="exportBtn" type="button">Export progress</button>
+    <label class="import-label">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+    <button id="resetBtn" type="button">Reset</button>
+  </div>
+</nav>
+<p class="status-line" id="statusLine">Loading the trophy list…</p>
+
+<section class="roadmap" id="roadmap" aria-label="Platinum roadmap">
+  <h2>Roadmap to the Platinum — <span class="roadmap-sub">Vice Got a Price!</span></h2>
+  <p class="roadmap-intro">Five stages, in order. Finish one stage before leaning on the next; the story stages unlock the world the later stages need. Estimated time for the Platinum: about 200 hours (Output Lag).</p>
+  <ol class="stages" id="stageList"></ol>
+</section>
+
+<main class="layout">
+  <section class="list-panel" aria-label="Trophy list">
+    <h2 id="listHeading">Trophy checklist</h2>
+    <ul class="trophy-list" id="trophyList"></ul>
+    <p class="empty-note" id="emptyNote" hidden>No trophies match this filter. Try “All 55” — or note that this game has <strong>no online trophies</strong>: all 55 are single-player, so the Online filter is meant to stay empty.</p>
+  </section>
+  <aside class="detail-panel" id="detailPanel" aria-label="Selected trophy guide">
+    <h2>Guide</h2>
+    <div id="detailBody"><p class="detail-empty">Pick any trophy on the left to read its guide, its sources and when it can be missed.</p></div>
+  </aside>
+</main>
+
+<footer class="sources">
+  <h2>Sources &amp; honesty notes</h2>
+  <p>Official trophy names, descriptions and grades are as PlayStation publishes them, via the trophy databases Exophase and PSNProfiles, which agree on all 55. Every guide above is written for this atlas in our own words; it draws on the published guides below and names them beside each trophy. Where no published guide confirms an exact trigger — five cryptic trophies — the guide says so plainly instead of inventing a method.</p>
+  <ul>
+    <li><a href="https://outputlag.com/guides/gta-6-trophy-list/">Output Lag — GTA 6 Trophy List</a></li>
+    <li><a href="https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/">KeenGamer — GTA 6 Trophy Guide &amp; Platinum Roadmap</a></li>
+    <li><a href="https://cryptogames.gg/gta-6-trophies-achievements-full-list/">CryptoGames — GTA 6 Trophies and Achievements</a></li>
+    <li><a href="https://www.gtavicecityhub.com/achievements">GTA Vice City Hub — GTA 6 Achievements</a></li>
+    <li><a href="https://www.ofzenandcomputing.com/gta-6-trophy-list-trophies-achievements/">Of Zen and Computing — GTA 6 Trophy List</a></li>
+  </ul>
+  <p class="fineprint">An unofficial fan guide. Not affiliated with Rockstar Games or PlayStation. No Rockstar logo, artwork or fonts are used; the look is original. The app loads only its own files and makes no network requests. Progress is stored only in your browser (localStorage) and in the file you export.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
